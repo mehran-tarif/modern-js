@@ -1,10 +1,17 @@
+let firstname = "Mehran";
+let lastname = "Tarif";
+let age = 23;
 
-// this code allow us to print some text in page!
-document.write("Hello World from myscript file!");
-/*
-	i writed here some
-	comments!
-*/
-console.log("Here is My Console!");
+console.log(firstname, lastname, age);
 
-// alert("How Are You?");
+const access = "yes";
+
+console.log(access)
+
+// const access = "no"
+
+var field = "Nursing";
+console.log(field)
+
+field = "Programing"
+console.log(field)
