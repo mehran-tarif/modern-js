@@ -1,17 +1,22 @@
-let firstname = "Mehran";
-let lastname = "Tarif";
-let age = 23;
+// var myVar = 10;
+// let myLet = 20;
 
-console.log(firstname, lastname, age);
+// var myVar = 1000;
+// myLet = 2000;
 
-const access = "yes";
+// 	{
+// 		var myVar = 1000;
+// 		let myLet = 2000;
+// 		// console.log(myLet);
+// 	}
 
-console.log(access)
+// console.log(myVar);
+// console.log(myLet);
 
-// const access = "no"
+console.log(myVar);
+var myVar = 10;
+console.log(myVar);
 
-var field = "Nursing";
-console.log(field)
-
-field = "Programing"
-console.log(field)
+console.log(myLet);
+let myLet = 20;
+console.log(myLet);
