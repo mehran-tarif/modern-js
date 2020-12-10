@@ -1,22 +1,14 @@
-// var myVar = 10;
-// let myLet = 20;
+// a-zA-Z0-9_$
 
-// var myVar = 1000;
-// myLet = 2000;
+// let 1number = 10 => false
+// let number1 = 10 => true
 
-// 	{
-// 		var myVar = 1000;
-// 		let myLet = 2000;
-// 		// console.log(myLet);
-// 	}
+// let const = 20 => false
+// let Const = 20 => true
 
-// console.log(myVar);
-// console.log(myLet);
+//reserved words
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar
 
-console.log(myVar);
-var myVar = 10;
-console.log(myVar);
-
-console.log(myLet);
-let myLet = 20;
-console.log(myLet);
+let first_name = "Mehran"      //Snake
+let FirstName = "Ali"          //Pascal
+let firstNameLastName = "Amir" //Camel Case
