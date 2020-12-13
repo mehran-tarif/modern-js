@@ -1,10 +1,8 @@
-let students = ["Mehran", 'Ali', "Amir", 'Reza', 'Hasan'];
-let teachers = ["Sam", 'Sima']
-let numbers = [1,2,25,64,3,5,7,17]
+let students = [
+	["Mehran", [20, 18, 17, 9]],
+	["Ali", [16, 17,15,19]],
+	["Reza", [14,5,2,7]],
+];
 
-// console.log(students.includes("Sima"))
-// students = students.concat(teachers, numbers, "Amir Ali")
-// students = students.concat("Amir Ali")
-// console.log(students.indexOf("Sima"))
-// console.log(numbers.find((n) => n > 10))
-console.log(numbers.filter((n) => n < 10))
+// console.log(students)
+console.log(students[0][1][0])
