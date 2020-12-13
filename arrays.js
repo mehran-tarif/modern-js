@@ -1,15 +1,10 @@
-let students = ["Mehran", 'Ali', "Amir", 'Reza', 'Hasan'];
+// let students = ["Mehran", 'Ali', "Amir", 'Reza', 'Hasan'];
 
-// students.push("Sima")
-// students.push("Sara")
-// students.pop()
-// students.pop()
-// students.shift()
-// students.shift()
-// students.unshift("Sima")
-// students.unshift("Sara")
-// students.splice(1, 2, 'Sima', 'Sara')
+// console.log(students.sort())
+// console.log(students.sort().reverse())
 
-let new_students = students.slice(1, 5)
 
-console.log(new_students)
+let numbers = [1,2,25,64,3,5,7,17]
+
+
+console.log(numbers.sort((a, b) => a-b))
