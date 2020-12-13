@@ -1,5 +1,8 @@
-let students = ["Mehran", 'Ali', "Amir", 25, true];
+// let students = ["Mehran", 'Ali', "Amir"];
 
-console.log(typeof students[0])
-console.log(typeof students[3])
-console.log(typeof students[4])
+// console.log(students.toString())
+// console.log(students.join(' ** '))
+
+
+let students = "Mehran, Ali, Amir";
+console.log(typeof students.split(', '))
