@@ -6,10 +6,18 @@ let students = ["Mehran", "Sima", "Reza", "Hasan", "Ali", "Sara"]
 // 	i++;
 // }
 
-for (let i = 0; i < students.length; i++) {
-	console.log(`Hello ${students[i]}`);
-}
+// for (let i = 0; i < students.length; i++) {
+// 	console.log(`Hello ${students[i]}`);
+// }
 
-for (let i = students.length - 1; i >= 0; i--) {
-	console.log(`Hello ${students[i]}`);
-}
+// for (let i = students.length - 1; i >= 0; i--) {
+// 	console.log(`Hello ${students[i]}`);
+// }
+
+students.forEach((student, index) => {
+	console.log(`${index + 1} - ${student}`);
+	// ..
+	// ..
+	// ..
+	// ..
+});
