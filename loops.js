@@ -1,8 +1,15 @@
 let students = ["Mehran", "Sima", "Reza", "Hasan", "Ali", "Sara"]
 
-let i = 0;
-do {
+// let i = 0;
+// while (i < students.length) {
+// 	console.log(`Hello ${students[i]}`);
+// 	i++;
+// }
+
+for (let i = 0; i < students.length; i++) {
 	console.log(`Hello ${students[i]}`);
-	i++;
 }
-while (i < students.length)
+
+for (let i = students.length - 1; i >= 0; i--) {
+	console.log(`Hello ${students[i]}`);
+}
