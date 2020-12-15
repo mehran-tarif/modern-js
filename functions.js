@@ -1,5 +1,9 @@
-function say_hello(name='Mehran') {
-	return `Hello ${name}!`
+function fullname(firstname, lastname) {
+	return `${firstname} ${lastname}`
 }
 
-say_hello("Sima")
+
+let f = "Mehran"
+let l = "Tarif"
+
+console.log(`Hello Mr. ${fullname(f, l)}`)
