@@ -1,24 +1,27 @@
-let articles = [
-	{
-		title: "My First Article.",
-		description: "Bacon ipsum dolor amet beef ribs fatback ribeye tri-tip. Pork belly sirloin turkey ground round, tri-tip pork loin hamburger salami shankle ham hock t-bone. Frankfurter filet mignon strip steak pork chop chislic bacon jowl leberkas tongue ball tip bresaola turkey jerky shank landjaeger. Fatback spare ribs short ribs shankle ham hock pastrami.",
-		views: 30,
-	},
-	{
-		title: "My Second Article.",
-		description: "Alcatra tail tenderloin andouille prosciutto, chuck salami frankfurter venison shoulder capicola tri-tip turducken corned beef. Jowl cow ball tip jerky, hamburger short loin turkey pig fatback ribeye landjaeger meatloaf. Salami alcatra sausage flank spare ribs pig fatback chicken cupim burgdoggen swine tenderloin chuck. Jowl bacon buffalo cupim venison shank spare ribs ground round corned beef frankfurter chuck chicken beef ribs. Ball tip drumstick corned beef filet mignon turkey kielbasa.",
-		views: 30,
-	},
-	{
-		title: "My 3th Article.",
-		description: "Ham sausage short loin pork chop kevin beef ribs tail pig turducken andouille brisket buffalo spare ribs boudin. Sirloin andouille pork chop pancetta, bresaola ham shoulder leberkas fatback pork belly meatball chicken. Strip steak frankfurter venison beef pork belly boudin, drumstick landjaeger ham hock ball tip brisket. Bacon tail tongue landjaeger buffalo, flank andouille leberkas picanha kevin sausage.",
-		views: 30,
-	},
-]
+// console.log(Number)
+// console.log(Number.EPSILON)
+// console.log(Number.MAX_SAFE_INTEGER)
+// console.log(Number.MAX_VALUE * 10)
+// console.log(Number.isFinite(Number.MAX_VALUE * 10))
 
-articles.forEach(article => {
-	console.log(article.title);
-	console.log(article.description);
-	console.log("Views: " + article.views);
-	console.log("----------------------------")
-});
+// console.log(Math)
+// console.log(Math.E)
+// console.log(Math.PI)
+
+// function circlePrimeter (d) {
+// 	console.log(d * Math.PI)
+// }
+
+// circlePrimeter(5)
+
+// console.log(Math.sqrt(10))
+// console.log(10 ** 0.5)
+
+// console.log(Math.pow(10, 2))
+// console.log(10 ** 2)
+
+// console.log(Math.random())
+// console.log(Math.round(5.49))
+// console.log(Math.round(Math.random() * 5))
+
+console.log(Date.now())
