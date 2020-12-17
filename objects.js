@@ -1,27 +1,16 @@
-// console.log(Number)
-// console.log(Number.EPSILON)
-// console.log(Number.MAX_SAFE_INTEGER)
-// console.log(Number.MAX_VALUE * 10)
-// console.log(Number.isFinite(Number.MAX_VALUE * 10))
+// let number1 = 20;
+// let number2 = number1;
 
-// console.log(Math)
-// console.log(Math.E)
-// console.log(Math.PI)
+let student1 = {
+	name: "Mehran",
+	age: 23,
+}
 
-// function circlePrimeter (d) {
-// 	console.log(d * Math.PI)
-// }
+// let student2 = student1;
+let student2 = JSON.parse(JSON.stringify(student1))
 
-// circlePrimeter(5)
+student2.age = 30;
+student2.name = "Ali";
 
-// console.log(Math.sqrt(10))
-// console.log(10 ** 0.5)
-
-// console.log(Math.pow(10, 2))
-// console.log(10 ** 2)
-
-// console.log(Math.random())
-// console.log(Math.round(5.49))
-// console.log(Math.round(Math.random() * 5))
-
-console.log(Date.now())
+console.log(student1)
+console.log(student2)
