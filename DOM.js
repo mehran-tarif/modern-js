@@ -1,20 +1,12 @@
-// let lists = document.querySelectorAll("li")
+// let header = document.querySelector("#header")
 
-// lists.forEach(list => {
-// 	// list.innerText += " new"
-// 	// list.innerHTML += ` <span class="badge badge-danger">new</span>`
-// 	list.textContent += " new"
-// })
+// console.log(header.getAttribute("id"))
+// header.setAttribute("title", "My header title!")
 
-// let list = document.querySelector("li")
+let links = document.querySelectorAll("a")
 
-// console.log(list.innerText)
-// console.log(list.textContent)
-
-let lists = document.querySelectorAll("li")
-
-lists.forEach(list => {
-	if (list.textContent.includes(" new")) {
-		list.innerHTML += ` <span class="badge badge-danger">new</span>`
-	}
+links.forEach(link => {
+	href = link.getAttribute("href")
+	link.setAttribute("href", href.replace("http://", "https://"))
+	link.setAttribute("data-protocol", "SSL")
 })
