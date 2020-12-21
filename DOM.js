@@ -1,7 +1,14 @@
-let btn = document.querySelector("button")
+let el = document.createElement("div")
+document.querySelector(".content").prepend(el)
 
-btn.addEventListener("click", e => {
-	e.target.textContent = "Clicked!"
-	e.target.classList.add('btn-danger')
-	alert("You clicked Button")
-})
+window.addEventListener('online', (event) => {
+    el.textContent = "Online"
+    el.className = "alert"
+    el.classList.add("alert-success")
+});
+
+window.addEventListener('offline', (event) => {
+    el.textContent = "Offline"
+    el.className = "alert"
+    el.classList.add("alert-danger")
+});
