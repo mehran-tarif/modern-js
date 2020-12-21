@@ -1,14 +1,7 @@
-let ul = document.querySelector("ul")
+let btn = document.querySelector("button")
 
-// Array.from(ul.children).forEach((li, index) => {
-// 	if (index % 2 == 0) {
-// 		li.style.color = 'red'
-// 	} else {
-// 		li.style.color = 'green'
-// 	}
-// })
-
-// ul.parentElement.style.fontSize = '25px'
-
-ul.previousElementSibling.style.color = 'red'
-ul.nextElementSibling.style.color = 'green'
+btn.addEventListener("click", e => {
+	e.target.textContent = "Clicked!"
+	e.target.classList.add('btn-danger')
+	alert("You clicked Button")
+})
