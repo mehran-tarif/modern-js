@@ -1,16 +1,14 @@
-// let header = document.querySelector("#header")
+let ul = document.querySelector("ul")
 
-// header.classList.add("mb-5")
-// header.classList.remove("btn-success")
-// header.classList.toggle("btn-danger")
+// Array.from(ul.children).forEach((li, index) => {
+// 	if (index % 2 == 0) {
+// 		li.style.color = 'red'
+// 	} else {
+// 		li.style.color = 'green'
+// 	}
+// })
 
-let lists = document.querySelectorAll("li")
+// ul.parentElement.style.fontSize = '25px'
 
-lists.forEach(list => {
-	if (list.textContent.includes("success")) {
-		list.classList.add('text-success')
-	}
-	if (list.textContent.includes("danger")) {
-		list.classList.add('text-danger')
-	}
-})
+ul.previousElementSibling.style.color = 'red'
+ul.nextElementSibling.style.color = 'green'
