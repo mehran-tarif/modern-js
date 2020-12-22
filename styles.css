@@ -4,6 +4,25 @@
 	width: 100%;
 	cursor: pointer;
 	padding: 15px;
+	border-bottom: 1px solid #ccc;
+}
+
+.accordion > div:first-child > span {
+	border-radius: 10px 10px 0 0;
+}
+
+.accordion > div:last-child > span {
+	border-radius: 0 0 10px 10px;
+	border-bottom: 0
+}
+
+.accordion > div.show:last-child > span {
+	border-radius: 0;
+}
+
+.accordion > div.show:last-child > div {
+	border-bottom: 1px solid #ccc;
+	border-radius: 0 0 10px 10px;
 }
 
 .accordion > div > span:after {
