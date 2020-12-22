@@ -21,12 +21,16 @@
 }
 
 .accordion > div > div {
-	padding: 15px;
 	border-left: 1px solid #ccc;
 	border-right: 1px solid #ccc;
-	display: none;
+	/*display: none;*/
+	max-height: 0;
+	overflow: hidden;
+	transition: all 0.5s;
+	padding: 0 15px;
 }
 
 .accordion > div.show > div {
-	display: block;
+	/*display: block;*/
+	padding: 15px;
 }
