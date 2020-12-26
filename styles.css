@@ -1,0 +1,26 @@
+.scroll,
+.scroll2 {
+	background-image: url('arrow.svg');
+	background-color: #f00;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 50px;
+	height: 50px;
+	border: none;
+	border-radius: 50%;
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	opacity: 0;
+	transition: opacity 0.5s;
+}
+
+.scroll2 {
+	background-color: #0f0;
+	left: 20px
+}
+
+.scroll.show,
+.scroll2.show {
+	opacity: 1
+}
