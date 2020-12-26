@@ -1,30 +1,29 @@
-let btn = document.querySelector("button.scroll")
-
+let scroll = document.querySelector("button.scroll")
 window.addEventListener("scroll", e => {
-	if (window.scrollY > 500 && window.scrollY < 2000) {
-		btn.classList.add('show')
+	if (window.scrollY > 300 & window.scrollY < 2000) {
+		scroll.classList.add("show")
 	} else {
-		btn.classList.remove('show')
+		scroll.classList.remove("show")
+	}
+})
+scroll.addEventListener("click", e => {
+	if (scroll.classList.contains("show")) {
+		window.scrollTo({top: 0, behavior: "smooth"})
 	}
 })
 
-btn.addEventListener("click", e => {
-	window.scrollTo({top: 0, behavior: "smooth"})
-})
 
 
-
-let btn2 = document.querySelector("button.scroll2")
-let el = document.querySelector("#Article")
-
+let scroll2 = document.querySelector("button.scroll2")
 window.addEventListener("scroll", e => {
 	if (window.scrollY > 2000) {
-		btn2.classList.add('show')
+		scroll2.classList.add("show")
 	} else {
-		btn2.classList.remove('show')
+		scroll2.classList.remove("show")
 	}
 })
-
-btn2.addEventListener("click", e => {
-	el.scrollIntoView({top: 0, behavior: "smooth"})
+scroll2.addEventListener("click", e => {
+	if (scroll2.classList.contains("show")) {
+		document.querySelector("#articles").scrollIntoView({top: 0, behavior: "smooth"})
+	}
 })
