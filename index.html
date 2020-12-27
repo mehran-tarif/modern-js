@@ -1,16 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Scroll | Modern JS!</title>
+	<title>Popup | Modern JS!</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-
+	<div class="popup-wrapper"></div>
 	<div class="container">
 		<div class="m-3">
 			<h1 id="header">DOM</h1>
+			<button class="popup-btn btn btn-primary">Open popup</button>
+			<div class="popup">
+				<h4>
+					My popup header
+					<span class="popup-close"></span>
+				</h4>
+				<div>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</div>
+				<button class="popup-close btn btn-secondary">Close</button>
+			</div>
 			<div class="content">
 				<p>Tri-tip pork belly tail ribeye frankfurter. Cupim burgdoggen pancetta, andouille filet mignon buffalo ribeye fatback. Flank turducken frankfurter shoulder fatback short loin ham swine shank chislic bresaola. Flank sirloin jowl, meatloaf short ribs fatback jerky doner tenderloin. Kevin drumstick andouille pastrami, meatloaf picanha rump.</p>
 				<p>Meatball leberkas cow tongue chicken fatback shoulder filet mignon tri-tip, beef frankfurter sirloin. Ham picanha tongue pork chop, prosciutto chislic spare ribs rump. Landjaeger chislic porchetta turducken. Tail venison chislic, porchetta tongue cow pork belly doner brisket. Boudin sirloin andouille drumstick pancetta, pig frankfurter.</p>
@@ -41,8 +57,6 @@
 			</div>
 		</div>
 	</div>
-	<button class="scroll"></button>
-	<button class="scroll2"></button>
-	<script src="scroll.js"></script>
+	<script src="popup.js"></script>
 </body>
 </html>

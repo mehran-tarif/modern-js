@@ -1,28 +1,49 @@
-.scroll,
-.scroll2 {
-	background-image: url('arrow.svg');
-	background-color: red;
-	background-repeat: no-repeat;
-	background-position: center;
-	width: 50px;
-	height: 50px;
-	border: 0;
-	border-radius: 50%;
-	position: fixed;
-	right: 20px;
-	bottom: 20px;
-	cursor: auto !important;
-	opacity: 0;
-	transition: opacity 0.5s
+.popup-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: -1;
+    transition: background-color 0.5s;
 }
 
-.scroll2 {
-	background-color: green;
-	left: 20px;
+.popup-wrapper.show {
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
 }
 
-.scroll.show,
-.scroll2.show {
-	cursor: pointer !important;
-	opacity: 1;
+.popup {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s;
+}
+
+.popup.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup > h4,
+.popup > div {
+	padding: 15px 20px;
+	border-bottom: 1px solid #ddd;
+}
+
+.popup > h4 > span.popup-close:after {
+	content: "\00D7";
+	float: right;
+	cursor: pointer;
+}
+
+.popup > button.popup-close {
+	float: right;
+	margin: 15px 20px;
 }
