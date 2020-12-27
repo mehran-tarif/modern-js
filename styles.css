@@ -20,10 +20,12 @@
     border-radius: 7px;
     position: fixed;
     left: 50%;
+    top: 50px;
     transform: translateX(-50%);
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.5s;
+    min-width: 400px;
 }
 
 .popup.show {
