@@ -35,6 +35,7 @@ form.username.addEventListener("keyup", e => {
 			e.target.classList.add("is-valid")
 			e.target.classList.remove("is-invalid")
 		} else {
+			eu = false
 			e.target.classList.add("is-invalid")
 		}
 	} else {
