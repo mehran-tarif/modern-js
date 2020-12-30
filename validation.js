@@ -6,17 +6,32 @@ let seePassword = document.querySelector("#see-password")
 // userPatter => up
 let up = /^[a-zA-Z][\w._]{5,23}$/
 
+// evaluateUser => eu
+let eu = false
+
 // evaluatePassword => ep
 let ep = 0
 
 form.addEventListener("submit", e => {
-	e.preventDefault()
+	if (!(eu && ep === 5)) {
+		e.preventDefault()
+
+		if (!eu) {
+			console.log(form.username)
+			form.username.classList.add("is-invalid")
+		}
+
+		if (ep !== 5) {
+			form.password.classList.add("is-invalid")
+		}
+	}
 })
 
 form.username.addEventListener("keyup", e => {
 	if (e.target.value) {
 		username.textContent = e.target.value.toLowerCase()
 		if (up.test(e.target.value)) {
+			eu = true
 			e.target.classList.add("is-valid")
 			e.target.classList.remove("is-invalid")
 		} else {
