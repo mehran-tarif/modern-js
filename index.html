@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Validations | Modern JS!</title>
+	<title>Theme | Modern JS!</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="styles.css">
@@ -10,37 +10,18 @@
 	<div class="container">
 		<div class="m-3">
 			<h1 id="header">DOM</h1>
-			<div class="row">
-				<div class="col-md-8 mx-auto">
-					<h6>
-						Username:
-						<span id="username"><i>Please write something</i></span>
-					</h6>
-					<h6>
-						Password:
-						<span id="password"><i>Please select a password</i></span>
-					</h6>
-					<hr>
-					<form class="form">
-						<div class="form-group">
-							<label for="Username">Username:</label>
-							<input type="text" name="username" id="Username" class="form-control" placeholder="Username">
-						</div>
-						<div class="form-group">
-							<label for="Password">Password:</label>
-							<input type="password" name="password" id="Password" class="form-control" placeholder="Password">
-						</div>
-						<input type="submit" name="submit" value="Submit" class="btn btn-success">
-					</form>
-					<hr>
-					<h6>
-						See password:
-						<span id="see-password"><i>Please select a password</i></span>
-					</h6>
-				</div>
+			<div class="themes clearfix mb-3">
+				<div data-color="light" style="background-color: #fff"></div>
+				<div data-color="dark" style="background-color: #000"></div>
+				<div data-color="yellow" style="background-color: #ffee61"></div>
+				<div data-color="green" style="background-color: #9aff61"></div>
+			</div>
+			<div class="content">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<h3>Theme: <span id="selection"></span></h3>
 			</div>
 		</div>
 	</div>
-	<script src="validation.js"></script>
+	<script src="theme.js"></script>
 </body>
 </html>
