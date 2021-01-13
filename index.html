@@ -7,25 +7,26 @@
 <body>
 
 	<script>
-		// localStorage.setItem("firstname", "Mehran")
-		// localStorage.setItem("lastname", "Tarif")
-		// localStorage.setItem("age", 23)
-		// localStorage.setItem("access", true)
-
-		// let firstname = localStorage.getItem("firstname")
-		// let lastname = localStorage.getItem("lastname")
-		// let age = localStorage.getItem("age")
-		// console.log(age)
-		// age = parseInt(age)
-		// let access = localStorage.getItem("access")
-		// if (access === "true") {
-		// 	console.log("You have access.")
-		// } else {
-		// 	console.log("You have not access.")
+		// let person = {
+		// 	firstname: "Mehran",
+		// 	lastname: "Tarif",
+		// 	age: 23,
+		// 	access: true,
 		// }
 
-		// localStorage.removeItem("lastname")
-		localStorage.clear()
+		// person = JSON.stringify(person)
+		// console.log(person)
+
+		// localStorage.setItem("person", person)
+
+		let person = localStorage.getItem("person")
+		person = JSON.parse(person)
+		// console.log(person.age + 1)
+		if (person.access) {
+			console.log("You have access.")
+		} else {
+			console.log("You have not access.")
+		}
 	</script>
 </body>
 </html>
