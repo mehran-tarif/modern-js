@@ -1,27 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Theme | Modern JS!</title>
+	<title>Todos | Modern JS!</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
 	<div class="container">
-		<div class="m-3">
-			<h1 id="header">DOM</h1>
-			<div class="themes clearfix mb-3">
-				<div data-color="light" style="background-color: #fff"></div>
-				<div data-color="dark" style="background-color: #000"></div>
-				<div data-color="yellow" style="background-color: #ffee61"></div>
-				<div data-color="green" style="background-color: #9aff61"></div>
+		<div class="w-50 mx-auto my-3">
+			<h1 id="header" class="text-center text-light mt-5">Todos</h1>
+			<div id="actions" class="text-center mb-3">
+				<a class="btn btn-primary" data-action="add">Add</a>
+				<a class="btn btn-success" data-action="search">Search</a>
 			</div>
-			<div class="content">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-				<h3>Theme: <span id="selection"></span></h3>
+			<div id="form-wrapper" class="mb-3">
+				<form id="add">
+					<input class="form-control" name="add" placeholder="Add todo ..">
+				</form>
+				<!-- <form id="search">
+					<input class="form-control" name="search" placeholder="Search todos ..">
+				</form> -->
 			</div>
+			<ul class="list-group">
+				<li class="list-group-item">
+					<span>Cras justo odio</span>
+					<img src="media/delete.png" alt="delete icon" class="float-right">
+				</li>
+				<li class="list-group-item">
+					<span>Dapibus ac facilisis in</span>
+					<img src="media/delete.png" alt="delete icon" class="float-right">
+				</li>
+				<li class="list-group-item">
+					<span>Morbi leo risus</span>
+					<img src="media/delete.png" alt="delete icon" class="float-right">
+				</li>
+				<li class="list-group-item">
+					<span>Porta ac consectetur ac</span>
+					<img src="media/delete.png" alt="delete icon" class="float-right">
+				</li>
+				<li class="list-group-item">
+					<span>Vestibulum at eros</span>
+					<img src="media/delete.png" alt="delete icon" class="float-right">
+				</li>
+			</ul>
 		</div>
 	</div>
-	<script src="theme.js"></script>
+	<video loop autoplay muted>
+		<source src="media/cut.mp4" type="video/mp4">
+	</video>
+	<script src="todos.js"></script>
 </body>
 </html>

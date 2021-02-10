@@ -1,28 +1,13 @@
-div.themes > div {
-	height: 20px;
-	width: 20px;
-	float: left;
-	margin-right: 5px;
+.list-group-item > span,
+.list-group-item > img {
 	cursor: pointer;
-	border: 1px solid #555
 }
 
-.light {
-	background-color: #fff;
-	color: #000;
-}
-
-.dark {
-	background-color: #444;
-	color: #fff;
-}
-
-.yellow {
-	background-color: #fff5a3;
-	color: #000;
-}
-
-.green {
-	background-color: #c0ff9c;
-	color: #000;
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
 }
