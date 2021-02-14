@@ -25,7 +25,7 @@ function createTodos(todos) {
 	todosList.innerHTML = ""
 
 	// create list tag for each todo
-	todos.forEach(todo => {
+	todos.forEach((todo, index) => {
 		let li = document.createElement("li")
 		li.className = "list-group-item"
 		let content = document.createElement("span")
@@ -41,6 +41,13 @@ function createTodos(todos) {
 
 		// append li to todosList
 		todosList.append(li)
+
+		// add deleteBtn functionality
+		deleteBtn.addEventListener("click", e => {
+			todos.splice(index, 1)
+			localStorage.setItem("todos", JSON.stringify(todos))
+			createTodos(todos)
+		})
 	});
 }
 
