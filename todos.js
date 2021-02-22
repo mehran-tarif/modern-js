@@ -60,3 +60,27 @@ function createTodos(todos) {
 }
 
 createTodos(todos)
+
+// action add & search
+let actions = document.querySelector("#actions")
+let formWrapper = document.querySelector("#form-wrapper")
+
+Array.from(actions.children).forEach(action => {
+	if (action.dataset.action == "add") {
+		action.addEventListener("click", e => {
+			formWrapper.innerHTML = `
+				<form id="add">
+					<input class="form-control" name="add" placeholder="Add todo ..">
+				</form>
+			`
+		})
+	} else if (action.dataset.action == "search") {
+		action.addEventListener("click", e => {
+			formWrapper.innerHTML = `
+				<form id="search">
+					<input class="form-control" name="search" placeholder="Search todos ..">
+				</form>
+			`
+		})
+	}
+})
