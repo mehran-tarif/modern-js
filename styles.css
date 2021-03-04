@@ -1,13 +1,83 @@
-.list-group-item > span,
-.list-group-item > img {
+.slideshow {
 	cursor: pointer;
 }
 
-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -1;
+.slides {
+	position: relative;
+}
+
+.slide {
+	display: none;
+	position: relative;
+}
+
+.slide.active {
+	display: block;
+}
+
+.slide img {
+	width: 100%;
+}
+
+.slide div {
+    background-color: #ff000087;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    min-height: 44px;
+    transition: min-height 0.5s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.slide div:hover {
+	min-height: 100%;
+}
+
+.slide div p {
+	margin-bottom: 0;
+	color: #fff;
+	padding: 10px;
+	transition: font-size 0.5s
+}
+
+.slide div:hover p {
+	font-size: 3.5rem;
+}
+
+.prev, .next {
+	position: absolute;
+	top: 50%;
+	background-color: #0009;
+	color: #fff;
+	padding: 16px;
+	margin-top: -32px;
+}
+
+.prev:active, .next:active {
+	background-color: #000;
+}
+
+.prev {
+	left: 0;
+	border-radius: 0 5px 5px 0;
+}
+.next {
+	right: 0;
+	border-radius: 5px 0 0 5px;
+}
+
+.points { margin-top: 10px; }
+
+.points span {
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	background-color: #aaa;
+	border-radius: 50%;
+}
+
+.points span.active {
+	background-color: #555;
 }
