@@ -13,7 +13,7 @@ let goNext = () => {
 
 //variables
 let active = 0
-let timer = 1000
+let timer = 3000
 
 let slideshow = document.querySelector(".slideshow")
 let slides = document.querySelectorAll(".slide")
@@ -23,3 +23,11 @@ let next = document.querySelector(".next")
 
 // setInterval
 setInterval(goNext, timer)
+
+// point event
+points.forEach((point, index) => {
+	point.addEventListener("click", e => {
+		active = index
+		classSwitcher()
+	})
+})
