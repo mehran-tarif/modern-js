@@ -1,5 +1,6 @@
 let mytime = new Date()
 
+
 console.log(`Date: ${mytime.getDate()}`)
 console.log(`Day: ${mytime.getDay()}`)
 console.log(`FullYear: ${mytime.getFullYear()}`)
