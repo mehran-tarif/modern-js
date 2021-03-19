@@ -13,37 +13,54 @@
 	</div>
 
 	<script>
-		// function getNumber () {
-		// 	return new Promise(resolve => {
-		// 		for (var i = 0; i < 1000 + 1; i++) {
-		// 			if (i == 1000) {
-		// 				resolve(i)
-		// 			}
-		// 		}
-		// 	})
-		// }
 
-		function getNumber () {
-			for (var i = 0; i < 1000 + 1; i++) {
-				if (i == 1000) {
-					return i
-				}
-			}
+		let articles = [
+			{ title: "First article", content: "Hello World!" },
+			{ title: "Second article", content: "Hello JS!" },
+		]
+
+		function showArticles () {
+			articles.forEach(article => console.log(article.title + ": " + article.content))
+		}
+
+		//promise
+		function addArticle (article) {
+			return new Promise((resolve, reject) => {
+				setTimeout(() => {
+					// length:2
+					articlesLength = articles.length
+					articles.push(article)
+					// length:3
+					if (articles.length == articlesLength + 1) {
+						resolve("Article added successfully!")
+					} else {
+						reject("Something went wrong.")
+					}
+				}, 500)
+			})
 		}
 
 		async function init () {
-			return await getNumber()
+			await addArticle({ title: "Third article", content: "Bye Bye!" })
+			showArticles()
 		}
 
+		init()
 
-		console.log(1)
-		console.log(2)
+		//then and catch promise
+		// addArticle({ title: "Third article", content: "Bye Bye!" })
+		// 	.then(showArticles)
+		// 	.catch(err => console.log(err))
 
-		// getNumber().then(value => console.log(value))
-		init().then(value => console.log(value))
+		//callback
+		// function addArticle (article, callback) {
+		// 	setTimeout(() => {
+		// 		articles.push(article)
+		// 		callback()
+		// 	}, 500)
+		// }
 
-		console.log(3)
-		console.log(4)
+		// addArticle({ title: "Third article", content: "Bye Bye!" }, showArticles)
 
 	</script>
 </body>
