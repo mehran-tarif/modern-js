@@ -1,23 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Clock | Modern JS!</title>
+	<title>callback, promise and async | Modern JS!</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
 	<div class="container">
 		<div class="w-50 mx-auto my-3 text-center">
-			<h1>My Clock</h1>
-			<p>My Clock written in html and javascript</p>
-			<hr>
-			<div id="clock">
-				
-			</div>
+			
 		</div>
 	</div>
-	<script src="jalali.js"></script>
-	<script src="clock.js"></script>
+
+	<script>
+		// function getNumber () {
+		// 	return new Promise(resolve => {
+		// 		for (var i = 0; i < 1000 + 1; i++) {
+		// 			if (i == 1000) {
+		// 				resolve(i)
+		// 			}
+		// 		}
+		// 	})
+		// }
+
+		function getNumber () {
+			for (var i = 0; i < 1000 + 1; i++) {
+				if (i == 1000) {
+					return i
+				}
+			}
+		}
+
+		async function init () {
+			return await getNumber()
+		}
+
+
+		console.log(1)
+		console.log(2)
+
+		// getNumber().then(value => console.log(value))
+		init().then(value => console.log(value))
+
+		console.log(3)
+		console.log(4)
+
+	</script>
 </body>
 </html>
