@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+	<title>Weather | Modern JS!</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="weather-icons/css/weather-icons.min.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<style type="text/css">
+		.weather-wrapper {
+			height: 13rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.t1 { background-color: #fffc4c; }
+		.t2 { background-color: #5aff2c; }
+		.t3 { background-color: #2cffb0; }
+		.t4 { background-color: #2cc4ff; }
+		.t5 { background-color: #2c88ff; }
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="w-50 mx-auto my-3">
+			<h1 class="text-center">Weather app</h1>
+			<hr>
+			<div class="row">
+				<div class="col-md-7 mx-auto">
+					<form id="city">
+						<input name="city" placeholder="شهر.." class="form-control mb-3">
+					</form>
+					<div id="app">
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="weather.js"></script>
+</html>
