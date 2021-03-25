@@ -1,66 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>callback, promise and async | Modern JS!</title>
+	<title>Fact Year | Modern JS!</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
 </head>
 <body>
 	<div class="container">
-		<div class="w-50 mx-auto my-3 text-center">
-			
+		<div class="w-50 mx-auto my-3">
+			<h1 class="text-center">Fact Year</h1>
+			<hr>
+			<form class="form-group">
+				<input name="number" type="number" class="form-control" placeholder="Year..">
+				<button class="btn btn-success my-3">Get Fact</button>
+			</form>
+			<div id="app"></div>
 		</div>
 	</div>
 
 	<script>
+		let app = document.querySelector("#app")
 
-		let articles = [
-			{ title: "First article", content: "Hello World!" },
-			{ title: "Second article", content: "Hello JS!" },
-		]
-
-		function showArticles () {
-			articles.forEach(article => console.log(article.title + ": " + article.content))
+		async function getYearFact (year="random") {
+			year = year ? year : "random"
+			let response = await fetch(`http://numbersapi.com/${year}/year`)
+			let data = await response.text()
+			app.textContent = data
+			app.className = "alert alert-success"
 		}
 
-		//promise
-		function addArticle (article) {
-			return new Promise((resolve, reject) => {
-				setTimeout(() => {
-					// length:2
-					articlesLength = articles.length
-					articles.push(article)
-					// length:3
-					if (articles.length == articlesLength + 1) {
-						resolve("Article added successfully!")
-					} else {
-						reject("Something went wrong.")
-					}
-				}, 500)
-			})
-		}
-
-		async function init () {
-			await addArticle({ title: "Third article", content: "Bye Bye!" })
-			showArticles()
-		}
-
-		init()
-
-		//then and catch promise
-		// addArticle({ title: "Third article", content: "Bye Bye!" })
-		// 	.then(showArticles)
-		// 	.catch(err => console.log(err))
-
-		//callback
-		// function addArticle (article, callback) {
-		// 	setTimeout(() => {
-		// 		articles.push(article)
-		// 		callback()
-		// 	}, 500)
-		// }
-
-		// addArticle({ title: "Third article", content: "Bye Bye!" }, showArticles)
+		let form = document.querySelector("form")
+		form.addEventListener("submit", e => {
+			e.preventDefault()
+			getYearFact(e.target.number.value)
+		})
 
 	</script>
 </body>
